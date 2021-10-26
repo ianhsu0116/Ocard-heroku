@@ -61,7 +61,6 @@ const LoginComponent = (props) => {
 
   // google登入、註冊
   const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
-  console.log(GOOGLE_CLIENT_ID);
   const responseGoogle = (response) => {
     //console.log(response.accessToken);
     AuthService.googleLogin(response.accessToken)
@@ -82,13 +81,14 @@ const LoginComponent = (props) => {
       })
       .catch((err) => {
         console.log(err);
+        console.log(err.response);
+
         window.alert("登入失敗(google)！ 問題正在努力修復中。");
       });
   };
 
   // Facebook登入、註冊
-  //const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
-  const FACEBOOK_CLIENT_ID = 554951315605149;
+  const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
   const responseFacebook = (response) => {
     //console.log(response.accessToken);
     AuthService.facebookLogin(response.accessToken)
@@ -108,6 +108,7 @@ const LoginComponent = (props) => {
       })
       .catch((err) => {
         console.log(err);
+        console.log(err.response);
         window.alert("登入失敗(facebook)！ 問題正在努力修復中。");
       });
   };
