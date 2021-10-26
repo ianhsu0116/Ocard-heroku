@@ -20,14 +20,14 @@ class ArticleService {
     formData.append("image", image);
 
     if (image) {
-      return axios.post(API_URL + "/", formData, {
+      return axios.post("/api/article/", formData, {
         headers: {
           Authorization: token,
         },
       });
     } else {
       return axios.post(
-        API_URL + "/",
+        "/api/article/",
         {
           board,
           title,
@@ -88,14 +88,14 @@ class ArticleService {
 
     // 判斷有無圖片
     if (image) {
-      return axios.post(API_URL + "/comment/" + _id, formData, {
+      return axios.post("/api/article/comment/" + _id, formData, {
         headers: {
           Authorization: token,
         },
       });
     } else {
       return axios.post(
-        API_URL + "/comment/" + _id,
+        "/api/article/comment/" + _id,
         {
           comment_id,
           user_id,
@@ -121,7 +121,7 @@ class ArticleService {
     }
 
     return axios.post(
-      API_URL + "/likes/" + _id,
+      "/api/article/likes/" + _id,
       {
         user_id,
       },
@@ -143,7 +143,7 @@ class ArticleService {
     }
 
     return axios.post(
-      API_URL + "/comment/likes/" + _id,
+      "/api/article/comment/likes/" + _id,
       {
         comment_id_arr,
         user_id,

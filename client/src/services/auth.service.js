@@ -3,11 +3,11 @@ const API_URL = "http://localhost:5000/api/user";
 
 class AuthService {
   getUserProfile(_id) {
-    return axios.get(API_URL + "/userProfile/" + _id);
+    return axios.get("/api/user/userProfile/" + _id);
   }
 
   login(email, password) {
-    return axios.post(API_URL + "/login", {
+    return axios.post("/api/user/login", {
       email,
       password,
     });
@@ -18,7 +18,7 @@ class AuthService {
   }
 
   register(email, password) {
-    return axios.post(API_URL + "/register", {
+    return axios.post("/api/user/register", {
       email,
       password,
     });
@@ -29,13 +29,13 @@ class AuthService {
   }
 
   googleLogin(access_token) {
-    return axios.post(API_URL + "/google/token", {
+    return axios.post("/api/user/google/token", {
       access_token,
     });
   }
 
   facebookLogin(access_token) {
-    return axios.post(API_URL + "/facebook/token", {
+    return axios.post("/api/user/facebook/token", {
       access_token,
     });
   }

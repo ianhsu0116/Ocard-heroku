@@ -3,7 +3,7 @@ const API_URL = "http://localhost:5000/api";
 
 class EditService {
   userEdit(_id, gender) {
-    return axios.put(API_URL + "/user/edit", {
+    return axios.put("/api/user/edit", {
       _id,
       gender,
     });
