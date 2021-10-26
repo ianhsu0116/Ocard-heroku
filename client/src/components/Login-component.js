@@ -61,6 +61,7 @@ const LoginComponent = (props) => {
 
   // google登入、註冊
   const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  console.log(GOOGLE_CLIENT_ID);
   const responseGoogle = (response) => {
     //console.log(response.accessToken);
     AuthService.googleLogin(response.accessToken)
@@ -86,7 +87,8 @@ const LoginComponent = (props) => {
   };
 
   // Facebook登入、註冊
-  const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
+  //const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
+  const FACEBOOK_CLIENT_ID = 554951315605149;
   const responseFacebook = (response) => {
     //console.log(response.accessToken);
     AuthService.facebookLogin(response.accessToken)
