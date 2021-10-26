@@ -270,8 +270,6 @@ div.header-con .header .header-right .profile-btn svg {
   min-width: 200px;
   margin: 2rem 7rem;
   margin-right: 0;
-  max-height: 85vh;
-  overflow: scroll;
 }
 
 .sidebar .sidbar-header {
@@ -396,6 +394,8 @@ div.header-con .header .header-right .profile-btn svg {
     min-height: 100vh;
     background: white;
     z-index: 20;
+    max-height: 100vh;
+    overflow: scroll;
   }
   .sidebar .sidbar-header {
     display: -webkit-box;
@@ -1545,7 +1545,7 @@ div.LoginComponent div.login-con div.login-right div.form-con div.button-con .re
   position: relative;
   overflow: hidden;
   margin: 1rem 0;
-  max-height: 30vh;
+  max-height: 70vh;
 }
 
 .articleDetail .articleDetail-con .articleDetail-content .articleDetail-text .articleDetail-img-con img {
