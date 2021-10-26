@@ -1545,10 +1545,11 @@ div.LoginComponent div.login-con div.login-right div.form-con div.button-con .re
   position: relative;
   overflow: hidden;
   margin: 1rem 0;
+  max-height: 30vh;
 }
 
 .articleDetail .articleDetail-con .articleDetail-content .articleDetail-text .articleDetail-img-con img {
-  height: 100%;
+  max-height: 100%;
   max-width: 100%;
 }
 
