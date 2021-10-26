@@ -1,0 +1,178 @@
+div.header-con {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  background-color: $OcardBlue;
+  width: 100vw;
+  .header {
+    top: 0;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $OcardBlue;
+    padding: 0.25rem 0;
+
+    .logo {
+      width: 85px;
+      margin: 0.2rem 1rem;
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+
+    .header-left {
+      margin-left: 7rem;
+      display: flex;
+      align-items: center;
+      width: 60%;
+      .ham_menu {
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+        }
+      }
+
+      .search {
+        display: flex;
+        width: 90%;
+        input,
+        button {
+          display: inline-block;
+          font-size: 12px;
+          padding: 0 5px;
+          color: white;
+        }
+        input {
+          width: 100%;
+          background-color: $OcardButtonBlue;
+          border: 1px solid $OcardButtonBlue;
+          border-radius: 5px 0 0 5px;
+          outline: none;
+          letter-spacing: 1px;
+        }
+
+        button {
+          padding: 5px 10px;
+          box-sizing: content-box;
+          background-color: $OcardBlue;
+          border: 1px solid $OcardButtonBlue;
+          border-radius: 0 5px 5px 0;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            position: relative;
+            height: 22px;
+            width: 22px;
+            fill: white;
+          }
+        }
+      }
+    }
+    .header-right {
+      margin-right: 7rem;
+      a,
+      button {
+        color: white;
+        font-size: 16px;
+      }
+
+      button {
+        width: 27px;
+        height: 27px;
+        border: none;
+        background: none;
+        margin-left: 1.5rem;
+        cursor: not-allowed;
+        svg {
+          fill: $colorLighGray;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .post-btn,
+      .logout-btn,
+      .profile-btn {
+        cursor: pointer;
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header-right {
+    button {
+      margin-left: 1rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header-left {
+    margin-left: 2rem !important;
+  }
+  .header-right {
+    margin-right: 2rem !important;
+    button {
+      margin-left: 0.8rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-left {
+    margin-left: 1rem !important;
+    width: 40% !important;
+    .ham_menu {
+      display: block !important;
+    }
+    .search {
+      display: none !important;
+    }
+  }
+  .header-right {
+    margin-right: 1rem !important;
+    button {
+      margin-left: 0.4rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-left {
+    .ham_menu {
+      width: 25px !important;
+      height: 25px !important;
+    }
+    .logo {
+      width: 65px !important;
+      margin: 0.25rem 0.5rem !important;
+    }
+  }
+  .header-right {
+    button {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}
