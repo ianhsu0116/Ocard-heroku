@@ -13,12 +13,15 @@
 html {
   overflow: -moz-hidden-unscrollable;
   /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
+  height: 100%;
 }
 
 body {
   font-family: "Noto Sans TC", sans-serif;
   background: #00324e;
   -ms-overflow-style: none;
+  height: 100%;
+  overflow: auto;
 }
 
 a {
