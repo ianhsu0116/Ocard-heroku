@@ -13,17 +13,12 @@
 html {
   overflow: -moz-hidden-unscrollable;
   /*注意！若只打 hidden，chrome 的其它 hidden 會出問題*/
-  height: 100%;
 }
 
 body {
   font-family: "Noto Sans TC", sans-serif;
   background: #00324e;
   -ms-overflow-style: none;
-  height: 100%;
-  width: calc(100vw + 18px);
-  /*瀏覽器滾動條的長度大約是 18px*/
-  overflow: auto;
 }
 
 a {
@@ -58,7 +53,7 @@ div.header-con {
           justify-content: center;
   z-index: 10;
   background-color: #006aa6;
-  width: 100vw;
+  width: 100%;
 }
 
 div.header-con .header {
