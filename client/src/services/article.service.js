@@ -45,24 +45,24 @@ class ArticleService {
 
   // 拿所有文章
   get() {
-    return axios.get("/");
+    return axios.get("/api/open-article");
   }
 
   // 根據_id拿到特定文章
   getById(_id) {
-    return axios.get("/" + _id);
+    return axios.get("/api/open-article/" + _id);
   }
 
   // 依照看板拿文章
   getByBoard(board) {
-    return axios.get("/board/" + board);
+    return axios.get("/api/open-article/board/" + board);
   }
 
   // 依照搜尋條件拿文章
   getBySearch(input, currentSidebarBoard) {
     //判斷這次是否需要依照看板下去搜尋
     if (currentSidebarBoard) {
-      return axios.post("/search/" + input, {
+      return axios.post("/api/open-article/search/" + input, {
         board: currentSidebarBoard,
       });
     } else {
