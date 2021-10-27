@@ -1,6 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:5000/api/article";
-const OPEN_API_URL = "http://localhost:5000/api/open-article";
+// const API_URL = "http://localhost:7777/api/article";
+// const OPEN_API_URL = "http://localhost:7777/api/open-article";
 
 class ArticleService {
   // 新增文章
