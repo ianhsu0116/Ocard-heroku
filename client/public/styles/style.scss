@@ -32,6 +32,11 @@ body {
   overflow: auto;
 }
 
+// 開啟 floating box 時防止 scroll event 傳導致下層
+.stopScroll {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }

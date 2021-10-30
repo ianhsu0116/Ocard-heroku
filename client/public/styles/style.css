@@ -24,6 +24,10 @@ body {
   overflow: auto;
 }
 
+.stopScroll {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
