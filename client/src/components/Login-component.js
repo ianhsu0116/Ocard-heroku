@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
+// import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import AuthService from "../services/auth.service";
 
 const LoginComponent = (props) => {
@@ -98,30 +98,30 @@ const LoginComponent = (props) => {
   };
 
   // Facebook登入、註冊
-  const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
-  const responseFacebook = (response) => {
-    //console.log(response.accessToken);
-    AuthService.facebookLogin(response.accessToken)
-      .then((response) => {
-        if (response.data.token) {
-          // webStorage存入當前user資料
-          localStorage.setItem("user", JSON.stringify(response.data));
+  // const FACEBOOK_CLIENT_ID = process.env.REACT_APP_FACEBOOK_CLIENT_ID;
+  // const responseFacebook = (response) => {
+  //   //console.log(response.accessToken);
+  //   AuthService.facebookLogin(response.accessToken)
+  //     .then((response) => {
+  //       if (response.data.token) {
+  //         // webStorage存入當前user資料
+  //         localStorage.setItem("user", JSON.stringify(response.data));
 
-          // 在currentUser存入當前user資料
-          setCurrentUser(AuthService.getCurrentUser());
+  //         // 在currentUser存入當前user資料
+  //         setCurrentUser(AuthService.getCurrentUser());
 
-          // 導回首頁
-          history.push("/");
-        } else {
-          window.alert(response.data.message);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log(err.response);
-        window.alert("登入失敗(facebook)！ 問題正在努力修復中。");
-      });
-  };
+  //         // 導回首頁
+  //         history.push("/");
+  //       } else {
+  //         window.alert(response.data.message);
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       console.log(err.response);
+  //       window.alert("登入失敗(facebook)！ 問題正在努力修復中。");
+  //     });
+  // };
 
   return (
     <div className="LoginComponent">
@@ -158,7 +158,7 @@ const LoginComponent = (props) => {
                   </button>
                 )}
               />
-              <FacebookLogin
+              {/* <FacebookLogin
                 appId={FACEBOOK_CLIENT_ID}
                 fields="name,email,picture"
                 callback={responseFacebook}
@@ -172,7 +172,7 @@ const LoginComponent = (props) => {
                     <div></div>
                   </button>
                 )}
-              />
+              /> */}
             </div>
             <div className="mid-line">
               <div className="line"></div>
