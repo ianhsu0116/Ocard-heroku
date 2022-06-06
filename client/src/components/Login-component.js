@@ -40,8 +40,13 @@ const LoginComponent = (props) => {
         history.push("/");
       })
       .catch((error) => {
-        console.log(error.response.data);
-        setMessage(error.response.data);
+        const data =
+          typeof error.response.data == "object"
+            ? error.response.data.message
+            : error.response.data;
+        setMessage(data);
+
+        console.log(error.response);
       });
   };
 
@@ -54,8 +59,13 @@ const LoginComponent = (props) => {
         history.push("/login");
       })
       .catch((error) => {
-        setMessage(error.response.data);
-        console.log(error.response.data);
+        const data =
+          typeof error.response.data == "object"
+            ? error.response.data.message
+            : error.response.data;
+        setMessage(data);
+
+        console.log(error.response);
       });
   };
 
